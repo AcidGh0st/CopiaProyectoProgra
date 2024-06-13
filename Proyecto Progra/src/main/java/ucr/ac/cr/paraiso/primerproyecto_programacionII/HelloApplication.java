@@ -19,7 +19,7 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
 
         // Get the local machine's IP address dynamically
-        String serverIP = "YOUR_PUBLIC_IP_HERE";  // Reemplaza con la IP pública del servidor
+        String serverIP = "10.235.15.40";  // Reemplaza con la IP pública del servidor
         System.out.println("Server IP Address: " + serverIP);
 
         // Set the server IP address for the controller

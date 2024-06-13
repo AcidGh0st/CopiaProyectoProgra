@@ -7,6 +7,10 @@ import ucr.ac.cr.paraiso.primerproyecto_programacionII.data.PatronXMLData;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.ServerSocket;
+
+
+
+
 public class MultiServidor {
     public static void main(String[] args) {
         ServerSocket serverSocket = null;

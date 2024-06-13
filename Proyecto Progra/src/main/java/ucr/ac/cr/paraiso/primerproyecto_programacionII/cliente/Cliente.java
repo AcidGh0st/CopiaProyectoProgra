@@ -15,7 +15,7 @@ public class Cliente {
         BufferedReader lectorTeclado = null;
 
         try {
-            String serverIP = "YOUR_PUBLIC_IP_HERE";  // Reemplaza con la IP pública del servidor
+            String serverIP = "10.235.15.40";  // Reemplaza con la IP pública del servidor
             echoSocket = new Socket(serverIP, serverPort);
             writer = new PrintWriter(echoSocket.getOutputStream(), true);
             reader = new BufferedReader(new InputStreamReader(echoSocket.getInputStream()));

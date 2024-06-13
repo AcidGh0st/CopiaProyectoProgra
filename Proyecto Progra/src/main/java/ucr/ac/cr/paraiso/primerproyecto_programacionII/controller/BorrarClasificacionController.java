@@ -77,6 +77,7 @@ public class BorrarClasificacionController {
         if (seleccionado != null) {
             String[] partes = seleccionado.split(" - ");
             String idClasificacion = partes[0];  // Asumiendo que el ID está antes del guion
+            llenarComboBox();
             try (Socket socket = new Socket(serverIP, 9999);
                  PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
                  BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
@@ -85,6 +86,7 @@ public class BorrarClasificacionController {
                 String respuesta = reader.readLine();
 
                 if (respuesta.contains("exitosamente")) {
+                    llenarComboBox();
                     // Eliminación exitosa, actualiza la lista observable y el ComboBox
                     actualizarListaObservable();
                     mostrarMensajeExito("Clasificación eliminada exitosamente.");

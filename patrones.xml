@@ -30,6 +30,6 @@
     <problemaPatron>PruebaModificada</problemaPatron>
     <solucionPatron>PruebaModificada</solucionPatron>
     <ejemplosPatron>PruebaModificada</ejemplosPatron>
-    <clasificacion />
+    <clasificacion>Comportamiento</clasificacion>
   </patron>
 </patrones>

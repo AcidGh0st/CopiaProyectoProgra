@@ -212,7 +212,7 @@ public class ModificarPatronController {
         if (!solucion.isEmpty()) patronModificado.setSolucionPatron(solucion);
         if (!ejemplos.isEmpty()) patronModificado.setEjemplosPatron(ejemplos);
         if (clasificacion != null) patronModificado.setIdClasificacion(clasificacion);
-
+        llenarComboBox();
         try {
             String patronXML = patronModificado.toXMLString();
             try (Socket socket = new Socket(serverIP, 9999);
@@ -225,6 +225,7 @@ public class ModificarPatronController {
 
                 if (respuesta.contains("exitosamente")) {
                     mostrarMensajeExito("Patrón modificado exitosamente.");
+                    llenarComboBox();
                 } else {
                     mostrarMensajeError("Error al modificar el patrón: " + respuesta);
                 }

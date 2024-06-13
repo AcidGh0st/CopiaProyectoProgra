@@ -113,6 +113,7 @@ public class BuscarPatronController {
             }
             String respuesta = respuestaBuilder.toString();
 
+            llenarComboBox();
             // Process the server's response
             if (respuesta != null && !respuesta.isEmpty()) {
                 SAXBuilder saxBuilder = new SAXBuilder();
@@ -128,6 +129,7 @@ public class BuscarPatronController {
                 String ejemplos = rootElement.getChildText("Ejemplos");
 
                 mostrarPatron(nombre, problema, clasificacion, solucion, contexto, ejemplos);
+                llenarComboBox();
             } else {
                 mostrarMensajeError("No se recibió una respuesta válida del servidor.");
             }

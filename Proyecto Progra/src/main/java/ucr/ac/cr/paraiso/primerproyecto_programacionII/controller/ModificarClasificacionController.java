@@ -156,7 +156,7 @@ public class ModificarClasificacionController {
 
 
         Clasificacion clasificacionModificada = new Clasificacion(clasificacionActual.getIdClasificacion(), nombre);
-
+        llenarComboBox();
         try {
             String clasificacionXML = clasificacionModificada.toXMLString();
             try (Socket socket = new Socket(serverIP, 9999);

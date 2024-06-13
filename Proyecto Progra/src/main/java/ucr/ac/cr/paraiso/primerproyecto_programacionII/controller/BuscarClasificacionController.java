@@ -101,7 +101,7 @@ public class BuscarClasificacionController {
                 count++;
             }
             String respuesta = respuestaBuilder.toString();
-
+            llenarComboBox();
             if (respuesta != null && !respuesta.isEmpty()) {
                 SAXBuilder saxBuilder = new SAXBuilder();
                 Document document = saxBuilder.build(new StringReader(respuesta));
@@ -111,6 +111,7 @@ public class BuscarClasificacionController {
                 String nombre = rootElement.getChildText("Name");
 
                 mostrarClasificacion(id, nombre);
+                llenarComboBox();
             } else {
                 mostrarMensajeError("No se recibió una respuesta válida del servidor.");
             }
