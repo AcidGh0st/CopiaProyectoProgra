@@ -19,8 +19,8 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
 
         // Get the local machine's IP address dynamically
-        String serverIP = InetAddress.getLocalHost().getHostAddress();
-        System.out.println("Local IP Address: " + serverIP);
+        String serverIP = "YOUR_PUBLIC_IP_HERE";  // Reemplaza con la IP pública del servidor
+        System.out.println("Server IP Address: " + serverIP);
 
         // Set the server IP address for the controller
         HelloController controller = fxmlLoader.getController();
