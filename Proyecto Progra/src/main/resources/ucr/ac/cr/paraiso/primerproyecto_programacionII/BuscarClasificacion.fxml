@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderPane" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucr.ac.cr.paraiso.primerproyecto_programacionII.controller.BuscarClasificacionController">
+    <center>
+        <AnchorPane prefHeight="414.0" prefWidth="625.0">
+            <children>
+                <Pane prefHeight="73.0" prefWidth="625.0">
+                    <children>
+                        <Label prefHeight="73.0" prefWidth="625.0" style="-fx-background-color: #f5ff8e;" text="Buscar clasificaciones">
+                            <font>
+                                <Font name="Arial Black" size="49.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <Pane layoutY="73.0" prefHeight="341.0" prefWidth="625.0" style="-fx-background-color: #f5ff8e;">
+                    <children>
+                        <Label layoutX="32.0" prefHeight="47.0" prefWidth="585.0" text="Ingrese el ID de la clasificación que desea buscar:">
+                            <font>
+                                <Font name="Arial Black" size="20.0" />
+                            </font>
+                        </Label>
+                  <ComboBox fx:id="comboBox" layoutX="211.0" layoutY="61.0" prefHeight="32.0" prefWidth="150.0" />
+                  <TextArea fx:id="txA_ID" layoutX="303.0" layoutY="171.0" prefHeight="43.0" prefWidth="305.0" />
+                  <TextArea fx:id="txA_Name" layoutX="303.0" layoutY="255.0" prefHeight="43.0" prefWidth="304.0" />
+                  <Label layoutX="134.0" layoutY="179.0" prefHeight="19.0" prefWidth="149.0" text="ID:">
+                     <font>
+                        <Font name="Elephant" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="263.0" text="Nombre de la clasificación: ">
+                     <font>
+                        <Font name="Elephant" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn_Buscar" layoutX="256.0" layoutY="115.0" mnemonicParsing="false" onAction="#BuscarOnAction" prefHeight="35.0" prefWidth="95.0" text="Buscar">
+                     <font>
+                        <Font name="Elephant" size="15.0" />
+                     </font>
+                  </Button>
+                    </children>
+                </Pane>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
