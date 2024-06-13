@@ -65,15 +65,6 @@ public class HelloController {
             buscarClasificacionController.setClasificacionXMLData(clasificacionXMLData);
         } else if (controller instanceof ModificarClasificacionController modificarClasificacionController) {
             modificarClasificacionController.setClasificacionXMLData(clasificacionXMLData);
-        } else if (controller instanceof EstructuralesController estructuralesController) {
-            estructuralesController.setPatronXMLData(patronXMLData);
-            estructuralesController.setClasificacionXMLData(clasificacionXMLData);
-        } else if (controller instanceof ComportamientoController comportamientoController) {
-            comportamientoController.setPatronXMLData(patronXMLData);
-            comportamientoController.setClasificacionXMLData(clasificacionXMLData);
-        } else if (controller instanceof CreacionalesController creacionalesController) {
-            creacionalesController.setPatronXMLData(patronXMLData);
-            creacionalesController.setClasificacionXMLData(clasificacionXMLData);
         }
     }
 
@@ -95,12 +86,6 @@ public class HelloController {
             anadirPatronController.setServerIP(serverIP);
         } else if (controller instanceof AnadirClasificacionController anadirClasificacionController) {
             anadirClasificacionController.setServerIP(serverIP);
-        } else if (controller instanceof EstructuralesController estructuralesController) {
-            estructuralesController.setServerIP(serverIP);
-        } else if (controller instanceof ComportamientoController comportamientoController) {
-            comportamientoController.setServerIP(serverIP);
-        } else if (controller instanceof CreacionalesController creacionalesController) {
-            creacionalesController.setServerIP(serverIP);
         }
     }
 
@@ -115,24 +100,6 @@ public class HelloController {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    @Deprecated
-    public void creacionales(ActionEvent actionEvent) {
-        loadPage("creacionales.fxml");
-        menuBar.setVisible(true);
-    }
-
-    @Deprecated
-    public void comportamiento(ActionEvent actionEvent) {
-        loadPage("comportamiento.fxml");
-        menuBar.setVisible(true);
-    }
-
-    @Deprecated
-    public void estructurales(ActionEvent actionEvent) {
-        loadPage("estructurales.fxml");
-        menuBar.setVisible(true);
     }
 
     @FXML
